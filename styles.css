@@ -1,0 +1,1207 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap'
+);
+
+:root {
+
+    --azul: #079fe3;
+    --azul-oscuro: #006eb7;
+
+    --amarillo: #ffd21f;
+
+    --azul-marino: #061b2d;
+
+    --texto: #173047;
+
+    --gris: #71818d;
+
+    --claro: #f2f8fb;
+
+    --blanco: #ffffff;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: var(--texto);
+
+    background: white;
+
+    line-height: 1.6;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor {
+
+    width: min(
+        1160px,
+        calc(100% - 40px)
+    );
+
+    margin: auto;
+
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--azul-marino);
+    box-shadow: 0 5px 20px rgba(27, 42, 179, 0.15);
+
+}
+
+.navegacion {
+    width: 90%;
+    min-height: 0px;    
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    max-height: 100px ;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+    display: block;
+
+}
+
+.menu {
+
+    display: flex;
+
+    gap: 28px;
+
+    margin-left: auto;
+
+}
+
+.menu {
+
+    color: rgb(233, 235, 227);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    position: relative;
+
+    padding: 30px 0;
+    
+
+}
+
+.activo:hover{
+    color: rgb(255, 187, 0);
+    transform: translateY(-3px);
+}
+
+.activo{
+    height: 20px;
+    
+    width: auto;
+    transition-duration: .2s;
+    transition-property: color,transform;
+    
+}
+
+
+.menu a.activo::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 17px;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+
+
+}
+
+.boton-navegacion {
+
+    background: var(--amarillo);
+
+    color: #111;
+
+    font-size: .76rem;
+
+    font-weight: 800;
+
+    padding: 13px 22px;
+
+    border-radius: 50px;
+
+    transition: .2s;
+
+}
+
+.boton-navegacion:hover {
+
+    transform: translateY(-5px);
+
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+    min-height: 590px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        url(
+            "hero.png"
+        );
+
+    background-position: center;
+
+    background-size: cover;
+
+}
+
+.contenido-portada {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    padding: 80px 0;
+
+}
+
+.subtitulo {
+
+    color: var(--amarillo);
+
+    font-size: .7rem;
+
+    letter-spacing: .14em;
+
+    font-weight: 800;
+
+    border-left: 4px solid var(--amarillo);
+
+    padding-left: 12px;
+
+}
+
+.portada h1 {
+
+    font-family: 'Barlow Condensed', sans-serif;
+
+    font-size: clamp(
+        4rem,
+        7vw,
+        6.5rem
+    );
+
+    line-height: .88;
+
+    text-transform: uppercase;
+
+    margin: 20px 0;
+
+    max-width: 750px;
+
+}
+
+.portada h1 span {
+
+    color: var(--amarillo);
+
+    display: block;
+
+}
+
+.portada p {
+
+    max-width: 610px;
+
+    font-size: 1rem;
+
+    color: #e5f2f8;
+
+    margin-bottom: 28px;
+
+}
+
+.boton-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--amarillo);
+    color: #111;
+    padding: 15px 24px;
+    border-radius: 50px;
+    font-size: .8rem;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.boton-principal:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(255,210,31,.3);
+
+}
+
+/* =========================
+   DESTINOS
+========================= */
+
+.destinos {
+
+    padding-top: 85px;
+
+    padding-bottom: 90px;
+
+}
+
+.encabezado-seccion {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 30px;
+
+}
+
+.titulo-mini {
+
+    display: inline-block;
+
+    color: var(--azul-oscuro);
+
+    font-size: .68rem;
+
+    letter-spacing: .13em;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+
+}
+
+.encabezado-seccion h2 {
+
+    font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+    font-size: 3.5rem;
+
+    text-transform: uppercase;
+
+    line-height: .9;
+
+}
+
+.encabezado-seccion p {
+
+    color: var(--azul-oscuro);
+
+    font-size: .75rem;
+
+    margin-top: 10px;
+
+}
+
+
+.cuadricula-destinos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+.tarjeta-destino {
+
+    height: 300px;
+
+    border-radius: 17px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.1);
+
+    transition: .25s;
+
+}
+
+.tarjeta-destino:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.tarjeta-destino::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(0,0,0,.8)
+        );
+
+}
+
+.cancun {
+
+    background-image:
+        url(
+            "can\ cun.jpeg"
+        );
+
+}
+
+.paris {
+
+    background-image:
+        url(
+            "Atardecer\ dorado.png"
+        );
+
+}
+
+.nueva-york {
+
+    background-image:
+        url(
+            "santa\ marta.jpeg"
+        );
+
+}
+
+.machu {
+
+    background-image:
+        url(
+            "Europa.jpeg"
+        );
+
+}
+
+.informacion-destino {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    color: white;
+
+}
+
+.informacion-destino h3 {
+
+    font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+    text-transform: uppercase;
+
+    font-size: 2.1rem;
+
+    line-height: .9;
+
+}
+
+.informacion-destino span {
+
+    font-size: .7rem;
+
+    color: #f0f5f8;
+
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.servicios {
+
+    background: var(--claro);
+
+    padding: 70px 0;
+
+}
+
+.contenedor-servicios {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 2.4fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+}
+
+.introduccion-servicios h2 {
+
+    font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+    font-size: 3.4rem;
+
+    text-transform: uppercase;
+
+    line-height: .9;
+
+    margin-bottom: 15px;
+
+}
+
+.introduccion-servicios p {
+
+    color: var(--gris);
+
+    font-size: .78rem;
+
+    max-width: 310px;
+
+}
+
+.cuadricula-servicios {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+}
+
+.servicio {
+
+    text-align: center;
+
+    padding: 10px 20px;
+
+    border-left: 1px solid #dce8ef;
+
+}
+
+.icono-servicio {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: auto auto 15px;
+
+    color: white;
+
+    font-weight: 800;
+
+    font-size: 1.3rem;
+
+}
+
+.icono-servicio.azul {
+
+    background: var(--azul);
+
+}
+
+.icono-servicio.amarillo {
+
+    background: var(--amarillo);
+
+    color: #111;
+
+}
+
+.servicio h3 {
+
+    font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+    font-size: 1.35rem;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+
+}
+
+.servicio p {
+
+    color: var(--gris);
+
+    font-size: .66rem;
+
+}
+
+/* =========================
+   RESERVA
+========================= */
+
+
+
+
+
+.mensaje-reserva h2 {
+    font-family:  sans;
+    font-size: 3.2rem;
+    line-height: .9;
+
+    max-width: 350px;
+}
+
+.linea-amarilla {
+
+    width: 100px;
+
+    height: 4px;
+
+    background: var(--amarillo);
+
+    margin-top: 20px;
+
+    transform: rotate(-8deg);
+
+}
+
+.formulario-reserva {
+    border-radius: 10px;
+    text-align: start;
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #EBF4F9;
+
+}
+
+.cotiza_text{
+    text-align: start;
+}
+.cotiza_viaje{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 3px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formulario-reserva h2 {
+
+    font-family:
+        'Barlow Condensed',
+        sans-serif;
+    font-size: 3.4rem;
+    line-height: .9;
+    text-transform: uppercase;
+
+}
+
+
+
+.fila-formulario {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+}
+
+.cotizacion_h2{
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #888;
+    border-radius: 10px;
+}
+
+
+
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.nosotros {
+
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+
+    text-align: center;
+
+    max-width: 800px;
+
+}
+
+.nosotros h2 {
+
+    font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+    font-size: 4rem;
+
+    text-transform: uppercase;
+
+    line-height: .9;
+
+    margin-bottom: 20px;
+
+}
+
+.nosotros p {
+
+    color: var(--gris);
+
+    font-size: .85rem;
+
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+
+    background: var(--azul-marino);
+
+    color: white;
+
+    padding-top: 45px;
+
+}
+
+.contenido-pie {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+
+}
+
+.logo-pie {
+
+    width: 170px;
+
+}
+
+.logo-pie img {
+
+    width: 100%;
+
+}
+
+footer h4 {
+
+    color: var(--amarillo);
+
+    font-size: .75rem;
+
+    margin-bottom: 10px;
+
+}
+
+footer p {
+
+    color: #9db0bc;
+
+    font-size: .7rem;
+
+    margin: 4px 0;
+
+}
+
+.redes-sociales a {
+
+    color: #a9bac4;
+
+    font-size: .7rem;
+
+    margin-right: 12px;
+
+}
+
+.derechos-autor {
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    text-align: center;
+
+    padding: 18px;
+
+    color: #718590;
+
+    font-size: .65rem;
+
+}
+
+/* =========================
+   DISEÑO RESPONSIVO
+========================= */
+
+@media(max-width:950px) {
+
+    .menu {
+        display: none;
+    }
+
+    .navegacion {
+        justify-content: space-between;
+    }
+
+    .cuadricula-destinos {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .contenedor-servicios {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cuadricula-servicios {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 20px;
+
+    }
+
+    .reserva {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .imagen-reserva {
+
+        min-height: 400px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .contenedor {
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+    .logo {
+
+        width: 130px;
+
+    }
+
+    .portada {
+
+        min-height: 550px;
+
+    }
+
+    .portada h1 {
+
+        font-size: 4rem;
+
+    }
+
+    .encabezado-seccion {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .cuadricula-destinos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .tarjeta-destino {
+
+        height: 330px;
+
+    }
+
+    .cuadricula-servicios {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .servicio {
+
+        border-left: none;
+
+        border-bottom:
+            1px solid #dce8ef;
+
+        padding: 20px;
+
+    }
+
+    .formulario-reserva {
+
+        padding: 45px 20px;
+
+    }
+
+    .fila-formulario {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contenido-pie {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =========================
+   CONTENIDO AGREGADO
+========================= */
+
+.introduccion-bloque {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 30px;
+}
+
+.introduccion-bloque h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3rem;
+    line-height: .95;
+    text-transform: uppercase;
+    color: var(--azul-marino);
+    margin-bottom: 12px;
+}
+
+.introduccion-bloque p {
+    color: var(--gris);
+    font-size: .82rem;
+}
+
+
+/* DESTINOS ADICIONALES */
+
+.destinos-top {
+    padding: 70px 0;
+    background: var(--claro);
+}
+
+.lista-destinos-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.lista-destinos-top article,
+.categorias-aliados article {
+    background: url("");
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.05);
+}
+
+.lista-destinos-top h3,
+.categorias-aliados h3 {
+    color: var(--azul-oscuro);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.45rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.lista-destinos-top p,
+.categorias-aliados p {
+    color: var(--gris);
+    font-size: .75rem;
+}
+
+
+/* FORMAS DE PAGO */
+
+.formas-pago {
+    padding: 75px 0;
+    background: white;
+}
+
+.pasos-pago {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.pasos-pago article {
+    text-align: center;
+    padding: 22px 16px;
+    border: 1px solid #dce8ef;
+    border-radius: 14px;
+}
+
+.pasos-pago article > span {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.pasos-pago h3 {
+    color: var(--azul-oscuro);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.pasos-pago p {
+    color: var(--gris);
+    font-size: .7rem;
+}
+
+.beneficio-pago {
+    margin: 25px auto 18px;
+    padding: 20px;
+    max-width: 760px;
+    text-align: center;
+    border-radius: 14px;
+    background: #e5f5fc;
+}
+
+.beneficio-pago h3 {
+    color: var(--azul-oscuro);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.beneficio-pago p {
+    color: var(--azul-marino);
+    font-weight: 800;
+}
+
+.ventajas-pago {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+    color: var(--azul-marino);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+
+/* INFORMACIÓN DE NOSOTROS */
+
+.datos-nosotros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 35px 0 25px;
+}
+
+.datos-nosotros article {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 12px;
+    border-radius: 12px;
+    background: var(--claro);
+}
+
+.datos-nosotros strong {
+    color: var(--azul-oscuro);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+.datos-nosotros span {
+    color: var(--gris);
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+.compromisos-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.compromisos-nosotros article {
+    padding: 18px;
+    border-left: 3px solid var(--amarillo);
+    background: var(--claro);
+}
+
+.compromisos-nosotros h3 {
+    color: var(--azul-oscuro);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+}
+
+.compromisos-nosotros p {
+    font-size: .72rem;
+}
+
+.testimonio {
+    margin-top: 25px;
+    padding: 22px;
+    color: var(--azul-marino);
+    background: #e5f5fc;
+    border-radius: 12px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* ALIADOS */
+
+.aliados {
+    padding: 75px 0;
+    background: var(--claro);
+}
+
+.categorias-aliados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+
+/* DISEÑO RESPONSIVO */
+
+@media(max-width:950px) {
+
+    .lista-destinos-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pasos-pago {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .lista-destinos-top,
+    .pasos-pago,
+    .datos-nosotros,
+    .compromisos-nosotros,
+    .categorias-aliados {
+        grid-template-columns: 1fr;
+    }
+
+    .introduccion-bloque h2 {
+        font-size: 2.5rem;
+    }
+
+}
