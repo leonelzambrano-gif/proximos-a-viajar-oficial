@@ -1,6 +1,4 @@
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
+/*CONFIGURACIÓN GENERAL */
 
 @import url(
     'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap'
@@ -63,9 +61,7 @@ a {
 
 }
 
-/* =========================
-   ENCABEZADO
-========================= */
+/*ENCABEZADO*/
 
 .encabezado {
     height: 100px;
@@ -137,19 +133,12 @@ a {
 
 
 .menu a.activo::after {
-
     content: "";
-
     position: absolute;
-
     left: 0;
-
     right: 0;
-
     bottom: 17px;
-
     height: 3px;
-
     border-radius: 10px;
 
 
@@ -157,19 +146,12 @@ a {
 }
 
 .boton-navegacion {
-
-    background: var(--amarillo);
-
+    background: green;
     color: #111;
-
     font-size: .76rem;
-
     font-weight: 800;
-
     padding: 13px 22px;
-
     border-radius: 50px;
-
     transition: .2s;
 
 }
@@ -180,9 +162,7 @@ a {
 
 }
 
-/* =========================
-   PORTADA
-========================= */
+/* PORTADA */
 
 .portada {
     min-height: 590px;
@@ -263,7 +243,7 @@ a {
 
     font-size: 1rem;
 
-    color: #e5f2f8;
+    color: #666;
 
     margin-bottom: 28px;
 
@@ -281,6 +261,14 @@ a {
     font-weight: 800;
     transition: .2s;
 }
+.boton-navegacion{
+    background-color: #00c856;
+    border: 2px solid #05351a;
+    color: white;
+    font-size: 15px;
+    margin: 0;
+
+}
 
 .boton-principal:hover {
 
@@ -290,9 +278,7 @@ a {
 
 }
 
-/* =========================
-   DESTINOS
-========================= */
+/* DESTINOS */
 
 .destinos {
 
@@ -479,9 +465,7 @@ a {
 
 }
 
-/* =========================
-   SERVICIOS
-========================= */
+/*SERVICIOS*/
 
 .servicios {
 
@@ -522,7 +506,7 @@ a {
 
 .introduccion-servicios p {
 
-    color: var(--gris);
+    color: #555;
 
     font-size: .78rem;
 
@@ -608,8 +592,7 @@ a {
 }
 
 /* =========================
-   RESERVA
-========================= */
+   RESERVA*/
 
 
 
@@ -698,9 +681,7 @@ a {
 
 
 
-/* =========================
-   NOSOTROS
-========================= */
+/*NOSOTROS */
 
 .nosotros {
 
@@ -738,9 +719,7 @@ a {
 
 }
 
-/* =========================
-   PIE DE PÁGINA
-========================= */
+/*PIE DE PÁGINA */
 
 footer {
 
@@ -822,9 +801,7 @@ footer p {
 
 }
 
-/* =========================
-   DISEÑO RESPONSIVO
-========================= */
+/*DISEÑO RESPONSIVO*/
 
 @media(max-width:950px) {
 
@@ -956,9 +933,7 @@ footer p {
 
 }
 
-/* =========================
-   CONTENIDO AGREGADO
-========================= */
+/* bCONTENIDO AGREGADO */
 
 .introduccion-bloque {
     text-align: center;
@@ -1013,7 +988,7 @@ footer p {
 
 .lista-destinos-top p,
 .categorias-aliados p {
-    color: var(--gris);
+    color: #555;
     font-size: .75rem;
 }
 
@@ -1060,7 +1035,7 @@ footer p {
 }
 
 .pasos-pago p {
-    color: var(--gris);
+    color: #555;
     font-size: .7rem;
 }
 
@@ -1121,7 +1096,7 @@ footer p {
 }
 
 .datos-nosotros span {
-    color: var(--gris);
+    color: #555;
     font-size: .72rem;
     font-weight: 600;
 }
