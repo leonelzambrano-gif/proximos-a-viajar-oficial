@@ -145,21 +145,26 @@ a {
 
 }
 
-.boton-navegacion {
-    background: green;
-    color: #111;
-    font-size: .76rem;
-    font-weight: 800;
-    padding: 13px 22px;
-    border-radius: 50px;
-    transition: .2s;
 
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
 }
 
 .boton-navegacion:hover {
-
     transform: translateY(-5px);
-
 }
 
 /* PORTADA */
@@ -172,7 +177,7 @@ a {
     overflow: hidden;
     background:
         url(
-            "hero.png"
+            "imagenes/hero.png"
         );
 
     background-position: center;
@@ -399,7 +404,7 @@ a {
 
     background-image:
         url(
-            "can\ cun.jpeg"
+            "imagenes/can\ cun.jpeg"
         );
 
 }
@@ -408,7 +413,7 @@ a {
 
     background-image:
         url(
-            "Atardecer\ dorado.png"
+            "imagenes/Atardecer\ dorado.png"
         );
 
 }
@@ -417,7 +422,7 @@ a {
 
     background-image:
         url(
-            "santa\ marta.jpeg"
+            "imagenes/santa\ marta.jpeg"
         );
 
 }
@@ -426,7 +431,7 @@ a {
 
     background-image:
         url(
-            "Europa.jpeg"
+            "imagenes/Europa.jpeg"
         );
 
 }
@@ -434,11 +439,8 @@ a {
 .informacion-destino {
 
     position: absolute;
-
     left: 20px;
-
     bottom: 20px;
-
     color: white;
 
 }
